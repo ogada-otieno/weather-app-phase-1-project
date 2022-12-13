@@ -27,18 +27,42 @@
         <h2>Login Here</h2>
         <div class="form-group">
           <label for="email">Enter email or username</label>
-          <input type="text" class="form-control" required />
+          <input type="text" name="email" class="form-control" required />
         </div>
         <div class="form-group">
           <label for="password">Enter password</label>
-          <input type="text" class="form-control" required /><br />
+          <input
+            type="text"
+            name="password"
+            class="form-control"
+            required
+          /><br />
         </div>
         <input type="submit" class="btn" value="Login" />
       </form>
     </div>
     <div></div>
-    <section>
+    <section class="weather-container">
       <!-- weather app -->
+
+      <div class="app-wrap">
+		<header>
+			<input type="text" autocomplete="off" class="search-box" placeholder="Search for a city">
+		</header>
+
+		<main>
+			<section class="location">
+				<div class="city">Nairobi, KE</div>
+				<div class="date">Friday 16 December 2022</div>
+			</section>
+
+			<div class="current">
+				<div class="temp">25<span>°C</span></div>
+				<div class="weather">Sunny</div>
+				<div class="hi-low">21°C / 27°C</div>
+			</div>
+		</main>
+	</div>
     </section>
   </body>
 </html>
