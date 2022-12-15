@@ -17,11 +17,11 @@
           <li><a href="#"> Home</a></li>
           <li><a href="#">About</a></li>
         </ul>
-        <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city">
-        <button type="button">Sign in</button>
+        <input type="text" autocomplete="off" class="search-box" id="searchCityOne"  placeholder="Search for a city">
+        <button type="button" id="showSignIn">Sign in</button>
       </nav>
     </section>
-    <section id="login"></section>
+    <section id="login" class="log-in">
     <!-- login section -->
     <div class="form-container">
       <form action="">
@@ -42,13 +42,13 @@
         <input type="submit" class="btn" value="Login" />
       </form>
     </div>
-    <div></div>
+    </section>
     <section class="weather-container">
       <!-- weather app -->
 
       <div class="weather-wrap">
 		<header>
-			<input type="text" autocomplete="off" class="search-box" id="searchCity" placeholder="Search for a city">
+			<input type="text" autocomplete="off" class="search-box" id="searchCityTwo" placeholder="Search for a city">
 		</header>
 
 		<main>
