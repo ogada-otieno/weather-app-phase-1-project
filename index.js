@@ -4,6 +4,7 @@ let apiKey = "651d508623e4eb736ff502f4b3410f7a";
 
 const searchbox = document.querySelector('#searchCity');
 
+//targets enter as a keypress event [e.keyCode ==13]
 searchbox.addEventListener("keypress", (e) => {
   if (e.keyCode == 13) {
     weatherData(searchbox.value);
@@ -26,8 +27,12 @@ function weatherData(city) {
 function insertDetails(data) {
   document.getElementById(
     "city"
-  ).innerText = `${data.name}, ${data.sys.country}`;
-  document.getElementById("date").innerText = "Wednesday, December 14, 2022";
+  ).innerText = `${data.name}, ${data.sys.country}`
+
+  let presentDate = new Date()
+  let dateDiv = document.getElementById('date')
+  dateDiv.innerText = createDate(presentDate)
+
 
   let temperature = Math.round(data.main.temp);
   document.getElementById("temp").innerText = `${temperature} °C`;
@@ -44,7 +49,7 @@ function insertDetails(data) {
 // day, date, month, year
 
 
-function createDate(date) {
+function createDate(dateValue) {
   // array for days of the week from Sunday (day-0) to saturday (day-6)
   let days = [
     "Sunday",
@@ -73,10 +78,10 @@ function createDate(date) {
   ];
 
   // JS methods for getDay, getDate, getMonth and getFullYear
-  let day = days[d.getDay()];
-  let date = d.getDate();
-  let month = months[d.getMonth()];
-  let year = d.getFullYear();
+  let day = days[dateValue.getDay()];
+  let date = dateValue.getDate();
+  let month = months[dateValue.getMonth()];
+  let year = dateValue.getFullYear();
 
   return `${day} ${date} ${month} ${year}`;
 }
