@@ -4,9 +4,10 @@ let apiKey = "651d508623e4eb736ff502f4b3410f7a";
 
 const searchbox = document.querySelector('#searchCity');
 
-//targets enter as a keypress event [e.keyCode ==13]
+//targets enter as a keypress event
 searchbox.addEventListener("keypress", (e) => {
-  if (e.keyCode == 13) {
+  if (e.key == 'Enter') {
+    console.log(searchbox.value);
     weatherData(searchbox.value);
   }
 });
