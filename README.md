@@ -16,5 +16,10 @@ Enter a city and see its weather details as outline below. As a user, I can:
 1. HTML
 2. CSS
 3. JavaScript
-4. API
+4. API - [OpenWeatherMap](https://openweathermap.org/current)
+
+## Author
+[Rodgers Ogada](https://github.com/ogada-otieno)
+
+[Email contact](ogadarodgers@gmail.com)
 

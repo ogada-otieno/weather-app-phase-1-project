@@ -1,20 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./index.js" defer></script>
     <title>Weather App</title>
-</head>
-<body>
-    <section>
-        <!-- section for current weather status -->
+  </head>
+  <body>
+    <section class="navigation">
+      <!-- Navigation -->
+      <nav>
+        <h2 class="logo-name">Weather App</h2>
+        <ul>
+          <li><a href="#"> Home</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city">
+        <button type="button">Sign in</button>
+      </nav>
     </section>
-    
-    <section>
-        <!--  -->
+    <section id="login"></section>
+    <!-- login section -->
+    <div class="form-container">
+      <form action="">
+        <h2>Login Here</h2>
+        <div class="form-group">
+          <label for="email">Enter email or username</label>
+          <input type="text" name="email" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Enter password</label>
+          <input
+            type="text"
+            name="password"
+            class="form-control"
+            required
+          /><br />
+        </div>
+        <input type="submit" class="btn" value="Login" />
+      </form>
+    </div>
+    <div></div>
+    <section class="weather-container">
+      <!-- weather app -->
+
+      <div class="weather-wrap">
+		<header>
+			<input type="text" autocomplete="off" class="search-box" id="searchCity" placeholder="Search for a city">
+		</header>
+
+		<main>
+			<section class="location">
+				<div class="city" id="city">
+          Nairobi, KE
+        </div>
+				<div class="date" id="date">
+          Friday 16 December 2022
+        </div>
+			</section>
+
+			<div class="current">
+				<div class="temp" id="temp">
+          10 °C
+        </div>
+				<div class="weather" id="description">
+          Sunny
+        </div>
+				<div class="hi-low" id="minMax">21°C / 27°C</div>
+			</div>
+		</main>
+	</div>
     </section>
-</body>
-<script src="./index.js"></script>
+  </body>
 </html>
