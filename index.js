@@ -39,3 +39,44 @@ function insertDetails(data) {
   let maxTemp = Math.round(data.main.temp_max);
   document.getElementById("minMax").innerText = `${minTemp} °C / ${maxTemp} °C`;
 }
+
+// let's build the date to display in an appealing format:
+// day, date, month, year
+
+
+function createDate(date) {
+  // array for days of the week from Sunday (day-0) to saturday (day-6)
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+
+  // months of the year from January (month-0) to December (month-11)
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+
+  // JS methods for getDay, getDate, getMonth and getFullYear
+  let day = days[d.getDay()];
+  let date = d.getDate();
+  let month = months[d.getMonth()];
+  let year = d.getFullYear();
+
+  return `${day} ${date} ${month} ${year}`;
+}
