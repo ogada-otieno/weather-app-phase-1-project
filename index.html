@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="./index.js" defer></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -15,8 +16,8 @@
         <ul>
           <li><a href="#"> Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Search</a></li>
         </ul>
+        <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city">
         <button type="button">Sign in</button>
       </nav>
     </section>
@@ -45,21 +46,29 @@
     <section class="weather-container">
       <!-- weather app -->
 
-      <div class="app-wrap">
+      <div class="weather-wrap">
 		<header>
-			<input type="text" autocomplete="off" class="search-box" placeholder="Search for a city">
+			<input type="text" autocomplete="off" class="search-box" id="searchCity" placeholder="Search for a city">
 		</header>
 
 		<main>
 			<section class="location">
-				<div class="city">Nairobi, KE</div>
-				<div class="date">Friday 16 December 2022</div>
+				<div class="city" id="city">
+          Nairobi, KE
+        </div>
+				<div class="date" id="date">
+          Friday 16 December 2022
+        </div>
 			</section>
 
 			<div class="current">
-				<div class="temp">25<span>°C</span></div>
-				<div class="weather">Sunny</div>
-				<div class="hi-low">21°C / 27°C</div>
+				<div class="temp" id="temp">
+          10 °C
+        </div>
+				<div class="weather" id="description">
+          Sunny
+        </div>
+				<div class="hi-low" id="minMax">21°C / 27°C</div>
 			</div>
 		</main>
 	</div>
