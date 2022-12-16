@@ -43,13 +43,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: brown;
+    color: #222;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: aquamarine;
+    color: brown;
     transition: .3s;
 }
 
@@ -67,6 +67,19 @@ button {
 button:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+nav input {
+  width: 100%;
+  max-width: 280px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 300;
+  transition: 0.2s ease-out;
+  color: #eeeeee;
 }
 
 /* Login form section */
@@ -130,8 +143,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* background-color: #cecece; */
-  background-color: aquamarine;
+  background-color: #cecece;
 }
 
 header {
@@ -150,16 +162,14 @@ header input {
   /* background-color: white; */
   border-radius: 16px;
   border-bottom: 3px solid #00df25;
-  border-right: 3px solid #00df25;
-
   font-size: 20px;
   font-weight: 300;
   transition: 0.2s ease-out;
   color: #eeeeee;
+  
 }
 
 header input:focus {
-  /* background-color: rgba(18, 18, 18, 0.8); */
   background-color: #cecece;
 }
 
@@ -173,19 +183,19 @@ main {
 }
 
 .location .city {
-  color: #eeeeee;
+  color: #222;
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
 .location .date {
-  color: #eeeeee;
+  color: #222;
   font-size: 16px;
 }
 
 .current .temp {
-  color: #eeeeee;
+  color: #222;
   font-size: 102px;
   font-weight: 900;
   margin: 30px 0;
@@ -197,7 +207,7 @@ main {
 }
 
 .current .weather {
-  color: #eeeeee;
+  color: #222;
   font-size: 32px;
   font-weight: 700;
   font-style: italic;
@@ -206,7 +216,7 @@ main {
 }
 
 .current .hi-low {
-  color: #eeeeee;
+  color: #222;
   font-size: 24px;
   font-weight: 500;
   text-shadow: 0 3px rgba(0, 0, 0, 0.4);
