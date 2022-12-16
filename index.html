@@ -16,62 +16,78 @@
         <ul>
           <li><a href="#"> Home</a></li>
           <li><a href="#">About</a></li>
+          <li><a href="#feedback">Rate Us</a></li>
         </ul>
-        <input type="text" autocomplete="off" class="search-box" id="searchCityOne"  placeholder="Search for a city">
+        <input
+          type="text"
+          autocomplete="off"
+          class="search-box"
+          id="searchCityOne"
+          placeholder="Search for a city"
+        />
         <button type="button" id="showSignIn">Sign in</button>
       </nav>
     </section>
     <section id="login" class="log-in">
-    <!-- login section -->
-    <div class="form-container">
-      <form action="">
-        <h2>Login Here</h2>
-        <div class="form-group">
-          <label for="email">Enter email or username</label>
-          <input type="text" name="email" class="form-control" required />
-        </div>
-        <div class="form-group">
-          <label for="password">Enter password</label>
-          <input
-            type="text"
-            name="password"
-            class="form-control"
-            required
-          /><br />
-        </div>
-        <input type="submit" class="btn" value="Login" />
-      </form>
-    </div>
+      <!-- login section -->
+      <div class="form-container">
+        <form action="">
+          <h2>Login Here</h2>
+          <div class="form-group">
+            <label for="email">Enter email or username</label>
+            <input type="text" name="email" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Enter password</label>
+            <input
+              type="text"
+              name="password"
+              class="form-control"
+              required
+            /><br />
+          </div>
+          <input type="submit" class="btn" value="Login" />
+        </form>
+      </div>
     </section>
     <section class="weather-container">
       <!-- weather app -->
 
       <div class="weather-wrap">
-		<header>
-			<input type="text" autocomplete="off" class="search-box" id="searchCityTwo" placeholder="Search for a city">
-		</header>
+        <header>
+          <input
+            type="text"
+            autocomplete="off"
+            class="search-box"
+            id="searchCityTwo"
+            placeholder="Search for a city"
+          />
+        </header>
 
-		<main>
-			<section class="location">
-				<div class="city" id="city">
-          Nairobi, KE
-        </div>
-				<div class="date" id="date">
-          Friday 16 December 2022
-        </div>
-			</section>
+        <main>
+          <section class="location">
+            <div class="city" id="city">Nairobi, KE</div>
+            <div class="date" id="date">Date</div>
+          </section>
 
-			<div class="current">
-				<div class="temp" id="temp">
-          10 °C
-        </div>
-				<div class="weather" id="description">
-          Sunny
-        </div>
-				<div class="hi-low" id="minMax">21°C / 27°C</div>
-			</div>
-		</main>
-	</div>
+          <div class="current">
+            <div class="temp" id="temp">10 °C</div>
+            <div class="weather" id="description">Sunny</div>
+            <div class="hi-low" id="minMax">21°C / 27°C</div>
+          </div>
+        </main>
+      </div>
+    </section>
+    <section id="feedback" class="feedback-container">
+      <form action="feedback" class="feedback">
+        <h2>Rate us here</h2>
+        <!-- Excellent V.G GOOD SOMEWHAT BAD BAD  -->
+        <input type="button" class="rate-btn rate-one" value="Excellent" />
+        <input type="button" class="rate-btn rate-two" value="Works" />
+        <input type="button" class="rate-btn rate-three" value="Good" />
+        <input type="button" class="rate-btn rate-four" value="Bad" />
+        <input type="button" class="rate-btn rate-five" value="Mmeehh" />
+      </form>
     </section>
   </body>
 </html>
