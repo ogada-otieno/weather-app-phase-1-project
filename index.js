@@ -9,6 +9,7 @@ searchboxOne.addEventListener("keypress", (e) => {
   if (e.key == "Enter") {
     weatherData(searchboxOne.value);
   }
+  
 });
 
 searchboxTwo.addEventListener("keypress", (e) => {
@@ -32,9 +33,7 @@ function weatherData(city) {
 
 // define destinations and send data to the destinations
 function insertDetails(data) {
-  document.getElementById(
-    "city"
-  ).innerText = `${data.name}, ${data.sys.country}`;
+  document.getElementById("city").innerText = `${data.name}, ${data.sys.country}`;
 
   let presentDate = new Date();
   let dateDiv = document.getElementById("date");
