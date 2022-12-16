@@ -97,5 +97,5 @@ const signInBtn = document.getElementById("showSignIn");
 const loginSection = document.getElementById("login");
 
 signInBtn.addEventListener("click", () => {
-  loginSection.classList.remove('log-in')
+  loginSection.classList.toggle('log-in')
 });
