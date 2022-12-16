@@ -1,14 +1,20 @@
 // fetching the weather data
 let apiKey = "651d508623e4eb736ff502f4b3410f7a";
 
-
-const searchbox = document.querySelector('#searchCity');
+const searchboxOne = document.querySelector("#searchCityOne");
+const searchboxTwo = document.querySelector("#searchCityTwo");
 
 //targets enter as a keypress event
-searchbox.addEventListener("keypress", (e) => {
-  if (e.key == 'Enter') {
-    console.log(searchbox.value);
-    weatherData(searchbox.value);
+searchboxOne.addEventListener("keypress", (e) => {
+  if (e.key == "Enter") {
+    weatherData(searchboxOne.value);
+  }
+  
+});
+
+searchboxTwo.addEventListener("keypress", (e) => {
+  if (e.key == "Enter") {
+    weatherData(searchboxTwo.value);
   }
 });
 
@@ -16,24 +22,22 @@ function weatherData(city) {
   let url =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
-    "&units=metric&appid="+ apiKey +"";
+    "&units=metric&appid=" +
+    apiKey +
+    "";
 
   fetch(url)
-    .then((resp) => resp.json()) // converts to json format
-    .then(insertDetails)
+    .then((resp) => resp.json())
+    .then(insertDetails);
 }
-
 
 // define destinations and send data to the destinations
 function insertDetails(data) {
-  document.getElementById(
-    "city"
-  ).innerText = `${data.name}, ${data.sys.country}`
+  document.getElementById("city").innerText = `${data.name}, ${data.sys.country}`;
 
-  let presentDate = new Date()
-  let dateDiv = document.getElementById('date')
-  dateDiv.innerText = createDate(presentDate)
-
+  let presentDate = new Date();
+  let dateDiv = document.getElementById("date");
+  dateDiv.innerText = createDate(presentDate);
 
   let temperature = Math.round(data.main.temp);
   document.getElementById("temp").innerText = `${temperature} °C`;
@@ -49,7 +53,6 @@ function insertDetails(data) {
 // let's build the date to display in an appealing format:
 // day, date, month, year
 
-
 function createDate(dateValue) {
   // array for days of the week from Sunday (day-0) to saturday (day-6)
   let days = [
@@ -59,7 +62,7 @@ function createDate(dateValue) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
 
   // months of the year from January (month-0) to December (month-11)
@@ -75,7 +78,7 @@ function createDate(dateValue) {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
 
   // JS methods for getDay, getDate, getMonth and getFullYear
@@ -86,3 +89,12 @@ function createDate(dateValue) {
 
   return `${day} ${date} ${month} ${year}`;
 }
+
+// hide and display login section when required
+
+const signInBtn = document.getElementById("showSignIn");
+const loginSection = document.getElementById("login");
+
+signInBtn.addEventListener("click", () => {
+  loginSection.classList.toggle('log-in')
+});
