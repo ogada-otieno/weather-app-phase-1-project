@@ -33,6 +33,14 @@
       <div class="form-container">
         <form action="" id="loginForm">
           <h2>Login Here</h2>
+
+          <div id="login-error-msg-holder">
+            <p id="login-error-msg">
+              Invalid username
+              <span id="error-msg-second-line">and/or password</span>
+            </p>
+          </div>
+
           <div class="form-group">
             <label for="email">Enter username</label>
             <input type="text" name="username" class="form-control" required />
@@ -79,16 +87,16 @@
       </div>
     </section>
     <section>
-    <div id="feedback" class="feedback-container">
-      <form action="feedback" class="feedback">
-        <h2>Rate us here</h2>
-        <input type="button" class="rate-btn rate-one" value="Excellent" />
-        <input type="button" class="rate-btn rate-two" value="Works" />
-        <input type="button" class="rate-btn rate-three" value="Good" />
-        <input type="button" class="rate-btn rate-four" value="Bad" />
-        <input type="button" class="rate-btn rate-five" value="Mmeehh" />
-      </form>
-    </div>
+      <div id="feedback" class="feedback-container">
+        <form action="feedback" class="feedback">
+          <h2>Rate us here</h2>
+          <input type="button" class="rate-btn rate-one" value="Excellent" />
+          <input type="button" class="rate-btn rate-two" value="Works" />
+          <input type="button" class="rate-btn rate-three" value="Good" />
+          <input type="button" class="rate-btn rate-four" value="Bad" />
+          <input type="button" class="rate-btn rate-five" value="Mmeehh" />
+        </form>
+      </div>
     </section>
   </body>
 </html>
