@@ -31,23 +31,37 @@
     <section id="login" class="log-in">
       <!-- login section -->
       <div class="form-container">
-        <form action="">
+        <form action="" id="loginForm">
           <h2>Login Here</h2>
+
+          <div id="login-error-msg-holder">
+            <p id="login-error-msg">
+              Invalid credentials
+            </p>
+          </div>
+
           <div class="form-group">
-            <label for="email">Enter email or username</label>
-            <input type="text" name="email" class="form-control" required />
+            <label for="email">Enter username</label>
+            <input type="text" name="username" class="form-control" required />
           </div>
           <div class="form-group">
             <label for="password">Enter password</label>
             <input
-              type="text"
+              type="password"
               name="password"
               class="form-control"
               required
             /><br />
           </div>
-          <input type="submit" class="btn" value="Login" />
+          <input type="submit" id="loginBtn" class="btn" value="Login" />
         </form>
+
+        <div id="login-success-msg-holder">
+            <p id="login-success-msg">
+              Successful login
+            </p>
+          </div>
+
       </div>
     </section>
     <section class="weather-container">
@@ -79,16 +93,16 @@
       </div>
     </section>
     <section>
-    <div id="feedback" class="feedback-container">
-      <form action="feedback" class="feedback">
-        <h2>Rate us here</h2>
-        <input type="button" class="rate-btn rate-one" value="Excellent" />
-        <input type="button" class="rate-btn rate-two" value="Works" />
-        <input type="button" class="rate-btn rate-three" value="Good" />
-        <input type="button" class="rate-btn rate-four" value="Bad" />
-        <input type="button" class="rate-btn rate-five" value="Mmeehh" />
-      </form>
-    </div>
+      <div id="feedback" class="feedback-container">
+        <form action="feedback" class="feedback">
+          <h2>Rate us here</h2>
+          <input type="button" class="rate-btn rate-one" value="Excellent" />
+          <input type="button" class="rate-btn rate-two" value="Works" />
+          <input type="button" class="rate-btn rate-three" value="Good" />
+          <input type="button" class="rate-btn rate-four" value="Bad" />
+          <input type="button" class="rate-btn rate-five" value="Mmeehh" />
+        </form>
+      </div>
     </section>
   </body>
 </html>
