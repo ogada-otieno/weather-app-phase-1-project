@@ -98,3 +98,25 @@ const loginSection = document.getElementById("login");
 signInBtn.addEventListener("click", () => {
   loginSection.classList.toggle('log-in')
 });
+
+// working on the fake login page
+//username: user
+// password: 1234
+
+loginBtn = document.getElementById('loginBtn')
+loginForm = document.getElementById('loginForm')
+
+loginBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+
+  const username = loginForm.username.value;
+  const password = loginForm.password.value;
+
+  if (username === 'user' && password === '1234') {
+    alert('You have successfully logged in')
+    location.reload();
+  } else {
+    alert('Invalid credentials')
+  }
+
+})
