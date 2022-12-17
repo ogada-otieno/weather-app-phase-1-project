@@ -105,6 +105,8 @@ signInBtn.addEventListener("click", () => {
 
 loginBtn = document.getElementById('loginBtn')
 loginForm = document.getElementById('loginForm')
+const loginErrorMsg = document.getElementById("login-error-msg");
+const loginSuccessMsg = document.getElementById("login-success-msg");
 
 loginBtn.addEventListener('click', (e) => {
   e.preventDefault()
@@ -113,10 +115,9 @@ loginBtn.addEventListener('click', (e) => {
   const password = loginForm.password.value;
 
   if (username === 'user' && password === '1234') {
-    alert('You have successfully logged in')
+    loginSuccessMsg.style.opacity = 1
     location.reload();
   } else {
-    alert('Invalid credentials')
+    loginErrorMsg.style.opacity = 1;
   }
-
 })
