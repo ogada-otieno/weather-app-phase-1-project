@@ -316,7 +316,15 @@ main {
   justify-content: center;
 }
 
-/* .feedback-container {
-  margin: auto;
-  width: 800px;
-} */
+#feedback {
+  display: block;
+  text-align: center;
+}
+.feedback{
+  display: flex;
+  justify-content: center;
+}
+.feedback input{
+  height: 50px;
+  margin: 20px 10px 0 0;
+}
